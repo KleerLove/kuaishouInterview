@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 设置全局字体、颜色和背景 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  width: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 容器样式 */
+.container {
+  /* width: 80%; */
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a73e8; /* 蓝色标题 */
+  border-bottom: 2px solid #ddd; /* 底部边框 */
+  padding-bottom: 0.5rem;
+}
+
+/* 子标题样式 */
+h4 {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* 列表样式 */
+ul {
+  list-style: disc;
+  padding: 0;
+}
+
+/* 链接样式 */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e53935;
+}
+
+/* 调整各板块之间的布局 */
+.container > div {
+  margin-bottom: 2rem;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
 }
